@@ -35,7 +35,7 @@ export default function Navbar() {
             <img
               src="images/shanghaitech-logo.png"
               alt="ShanghaiTech University logo"
-              className="h-12 w-auto rounded-md bg-white px-3 py-1.5 shadow-sm"
+              className="h-10 w-auto rounded-lg bg-white/95 px-2.5 py-1 shadow-sm backdrop-blur-sm"
             />
             <span className={`leading-tight ${scrolled ? 'text-slate-900' : 'text-white'}`}>
               <span className="block text-sm font-bold tracking-wide">M³ Group</span>
