@@ -33,9 +33,9 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between">
           <a href="#top" className="flex items-center gap-2">
             <img
-              src="images/logo.png"
-              alt="M³ Lab logo"
-              className="h-12 w-auto rounded-md bg-white px-2 py-1 shadow-sm"
+              src="images/shanghaitech-logo.png"
+              alt="ShanghaiTech University logo"
+              className="h-12 w-auto rounded-md bg-white px-3 py-1.5 shadow-sm"
             />
             <span className={`leading-tight ${scrolled ? 'text-slate-900' : 'text-white'}`}>
               <span className="block text-sm font-bold tracking-wide">M³ Group</span>
