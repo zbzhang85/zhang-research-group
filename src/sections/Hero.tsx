@@ -18,7 +18,7 @@ export default function Hero() {
         <img
           src="images/logo.png"
           alt="M³ Lab logo — Manufacturing, Microstructure, Mechanics"
-          className="h-16 sm:h-20 w-auto rounded-lg bg-white px-4 py-2 shadow-lg mb-8"
+          className="h-20 sm:h-24 w-auto rounded-lg bg-white px-4 py-2 shadow-lg mb-8"
         />
         <p className="text-cyan-400 text-sm font-semibold tracking-[0.25em] uppercase mb-4">
           Manufacturing · Microstructure · Mechanics

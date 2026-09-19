@@ -22,6 +22,14 @@ export default function News() {
                   {item.date}
                 </p>
                 <p className="mt-1 text-sm text-slate-700 leading-relaxed">{item.text}</p>
+                {item.image && (
+                  <img
+                    src={item.image}
+                    alt={item.text}
+                    loading="lazy"
+                    className="mt-3 max-h-80 w-full rounded-lg border border-slate-100 object-cover"
+                  />
+                )}
                 {item.links && item.links.length > 0 && (
                   <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
                     {item.links.map((l) => (

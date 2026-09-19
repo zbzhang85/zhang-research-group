@@ -10,7 +10,7 @@ export default function Contact() {
               <img
                 src="images/logo.png"
                 alt="M³ Lab logo"
-                className="h-11 w-auto rounded-md bg-white px-2 py-1"
+                className="h-12 w-auto rounded-md bg-white px-2 py-1"
               />
               <div className="leading-tight">
                 <p className="text-sm font-bold text-white">Zhang Research Group — M³ Laboratory</p>

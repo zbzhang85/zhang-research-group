@@ -30,6 +30,7 @@ export interface Direction {
   title: string;
   subtitle: string;
   description: string;
+  images?: { src: string; caption?: string }[];
   papers: DirectionPaper[];
 }
 
@@ -40,6 +41,16 @@ export const directions: Direction[] = [
     subtitle: 'Materials Design for & by AM',
     description:
       'Exploiting the expanded compositional design space of additive manufacturing to develop high-performance, Fe-rich, cost-affordable Ti. Machine-learning-guided composition design, high-throughput printing iterations, and mechanical-feedback optimization establish a new AM-based alloy design paradigm for aerospace and consumer-electronics applications.',
+    images: [
+      {
+        src: 'images/directions/d1-a.jpg',
+        caption: 'In-situ SEM + DIC revealing grain-boundary α lath mediated strain localization and cracking',
+      },
+      {
+        src: 'images/directions/d1-b.jpg',
+        caption: 'Fe-rich Ti alloy by directed energy deposition: segregation-free equiaxed β microstructure with isotropic properties',
+      },
+    ],
     papers: [
       {
         text: 'J. Chang, Y. Ma*, S. Huang, Z. Zhai, Y. Wu, R. Yang, Z.B. Zhang*, On the origin of grain boundary α phase mediated strain localization and crack initiation in metastable β titanium alloy, Acta Materialia 302 (2026) 121602.',
@@ -68,6 +79,20 @@ export const directions: Direction[] = [
     subtitle: 'Materials Design by AM (MDbAM)',
     description:
       'Harnessing the intrinsic physical metallurgy of AM — steep thermal gradients, ultra-fast solidification, and cyclic thermal history — to architect microstructures across length scales: melt-pool-scale heterogeneous structures, cellular dual-phase honeycomb alloys, and grain-boundary-engineered superalloys in which deleterious twin boundaries are eliminated by AM to enhance high-temperature fatigue performance.',
+    images: [
+      {
+        src: 'images/directions/d2-a.jpg',
+        caption: '3D EBSD tomography of melt-pool-scale heterogeneous structures architected by AM',
+      },
+      {
+        src: 'images/directions/d2-b.jpg',
+        caption: 'Material architecting from dual powders: HARD+SOFT domains with gradient interfaces for strength–ductility synergy',
+      },
+      {
+        src: 'images/directions/d2-c.jpg',
+        caption: 'Dual-phase (BCC/FCC) cellular structure with Ni/Cr/Mo elemental partitioning',
+      },
+    ],
     papers: [
       {
         text: 'Y. Xuan, J.Q. Chang, Y. Ou, R. Yang, Z.B. Zhang*, Heterogeneous structure architected by additive manufacturing: facile route towards strong and ductile steel, Materials Research Letters 12(3) (2024) 199-207.',
@@ -89,6 +114,16 @@ export const directions: Direction[] = [
     subtitle: 'Synchrotron + in-situ SEM/TEM + HRDIC',
     description:
       'Multidimensional, multiscale microstructural and mechanical characterization of titanium alloys and Ni-based superalloys under near-service environments, leveraging the Shanghai Synchrotron Radiation Facility and in-situ HRDIC. Current focus: hydrogen-assisted damage of AM titanium alloys and high-temperature fatigue of AM superalloys, guided by a strain-delocalization design philosophy.',
+    images: [
+      {
+        src: 'images/directions/d3-a.jpg',
+        caption: 'Phase boundaries redistribute deformation: from strain localization to strain delocalization in dual-phase Ti alloys',
+      },
+      {
+        src: 'images/directions/d3-b.jpg',
+        caption: 'Twin-boundary-associated strain localization and failure in Ni-based superalloys',
+      },
+    ],
     papers: [
       {
         text: 'Z. Wu, R. Turner, M.J. Qi, L.F.D. Shi, M.S. Wang, F. Wang, Z.H. Gao, Y. Chiu*, Z.B. Zhang*, Effect of phase boundary on the critical resolved shear stress and dislocation behavior of dual-phase titanium alloy, Acta Materialia 275 (2024) 120051.',
@@ -202,6 +237,7 @@ export const priorPubs: Publication[] = [
 export interface NewsItem {
   date: string;
   text: string;
+  image?: string;
   links?: { label: string; url: string }[];
 }
 
@@ -211,6 +247,14 @@ export const news: NewsItem[] = [
     text: 'Our Journal of Materials Science & Technology work on interphase engineering was selected for the ShanghaiTech 2026 “Beautiful Science” Calendar.',
     links: [
       { label: 'WeChat', url: 'https://mp.weixin.qq.com/s/iQ9eLxOEMm1dvYGKwZpt0Q' },
+    ],
+  },
+  {
+    date: '2026.07',
+    text: 'Congratulations to Dr. Jiaqiang Chang on earning his Ph.D. and being named an Outstanding Graduate of ShanghaiTech University, and to Puwei Dang and Jie Jiang on earning their Master\'s degrees. Wish you all a bright future!',
+    image: 'images/news-2026-07.jpg',
+    links: [
+      { label: 'WeChat', url: 'https://mp.weixin.qq.com/s/BcmMcsojIpvfRmwKg7BZBg' },
     ],
   },
   {

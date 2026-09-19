@@ -35,7 +35,7 @@ export default function Navbar() {
             <img
               src="images/logo.png"
               alt="M³ Lab logo"
-              className="h-10 w-auto rounded-md bg-white px-2 py-1 shadow-sm"
+              className="h-12 w-auto rounded-md bg-white px-2 py-1 shadow-sm"
             />
             <span className={`leading-tight ${scrolled ? 'text-slate-900' : 'text-white'}`}>
               <span className="block text-sm font-bold tracking-wide">M³ Group</span>
