@@ -59,34 +59,37 @@ export default function Research() {
                     className="mt-4 space-y-3 border-t border-slate-100 pt-4"
                     onClick={(e) => e.stopPropagation()}
                   >
-                    {d.images && d.images.length > 0 && (
-                      <div
-                        className={`grid gap-3 ${
-                          d.images.length > 1 ? 'sm:grid-cols-2' : ''
-                        }`}
-                      >
-                        {d.images.map((img, k) => (
-                          <figure key={k} className="overflow-hidden rounded-lg border border-slate-200 bg-white">
-                            <img
-                              src={img.src}
-                              alt={img.caption ?? d.title}
-                              loading="lazy"
-                              className="w-full object-cover"
-                            />
-                            {img.caption && (
-                              <figcaption className="px-3 py-2 text-[11px] leading-snug text-slate-500">
-                                {img.caption}
-                              </figcaption>
-                            )}
-                          </figure>
-                        ))}
-                      </div>
-                    )}
                     {d.papers.map((p, j) => (
                       <div key={j} className="rounded-lg bg-slate-50 p-3">
                         <p className="text-xs text-slate-600 leading-relaxed">
                           <PubText text={p.text} />
                         </p>
+                        {p.images && p.images.length > 0 && (
+                          <div
+                            className={`mt-2 grid gap-2 ${
+                              p.images.length > 1 ? 'sm:grid-cols-2' : ''
+                            }`}
+                          >
+                            {p.images.map((img, k) => (
+                              <figure
+                                key={k}
+                                className="overflow-hidden rounded-lg border border-slate-200 bg-white"
+                              >
+                                <img
+                                  src={img.src}
+                                  alt={img.caption ?? d.title}
+                                  loading="lazy"
+                                  className="w-full object-cover"
+                                />
+                                {img.caption && (
+                                  <figcaption className="px-3 py-2 text-[11px] leading-snug text-slate-500">
+                                    {img.caption}
+                                  </figcaption>
+                                )}
+                              </figure>
+                            ))}
+                          </div>
+                        )}
                         {p.news && p.news.length > 0 && (
                           <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
                             {p.news.map((nl) => (
@@ -112,7 +115,7 @@ export default function Research() {
           })}
         </div>
 
-        <figure className="mt-10 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+        <figure className="mx-auto mt-10 max-w-4xl overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
           <img
             src="images/hrdic-strain-650c.gif"
             alt="In-situ HRDIC: micro-strain evolution of a Ni-based superalloy at 650 °C"

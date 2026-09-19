@@ -22,6 +22,7 @@ export const profileParagraphs = [
 
 export interface DirectionPaper {
   text: string;
+  images?: { src: string; caption?: string }[];
   news?: { label: string; url: string }[];
 }
 
@@ -30,7 +31,6 @@ export interface Direction {
   title: string;
   subtitle: string;
   description: string;
-  images?: { src: string; caption?: string }[];
   papers: DirectionPaper[];
 }
 
@@ -41,19 +41,15 @@ export const directions: Direction[] = [
     subtitle: 'Materials Design for & by AM',
     description:
       'Exploiting the expanded compositional design space of additive manufacturing to develop high-performance, Fe-rich, cost-affordable Ti. Machine-learning-guided composition design, high-throughput printing iterations, and mechanical-feedback optimization establish a new AM-based alloy design paradigm for aerospace and consumer-electronics applications.',
-    images: [
-      {
-        src: 'images/directions/d1-a.jpg',
-        caption: 'In-situ SEM + DIC revealing grain-boundary α lath mediated strain localization and cracking',
-      },
-      {
-        src: 'images/directions/d1-b.jpg',
-        caption: 'Fe-rich Ti alloy by directed energy deposition: segregation-free equiaxed β microstructure with isotropic properties',
-      },
-    ],
     papers: [
       {
         text: 'J. Chang, Y. Ma*, S. Huang, Z. Zhai, Y. Wu, R. Yang, Z.B. Zhang*, On the origin of grain boundary α phase mediated strain localization and crack initiation in metastable β titanium alloy, Acta Materialia 302 (2026) 121602.',
+        images: [
+          {
+            src: 'images/directions/d1-a.jpg',
+            caption: 'In-situ SEM + DIC revealing grain-boundary α lath mediated strain localization and cracking',
+          },
+        ],
         news: [
           { label: 'ShanghaiTech News', url: 'https://www.shanghaitech.edu.cn/2025/1226/c1001a1118430/page.htm' },
           { label: 'ShanghaiTech News (EN)', url: 'https://www.shanghaitech.edu.cn/en/2025/1230/c1419a1118528/page.htm' },
@@ -61,6 +57,12 @@ export const directions: Direction[] = [
       },
       {
         text: 'J. Chang, Y. Ma*, S. Huang, M. Qi, Z. Zhai, Y. Wu, R. Yang, Z.B. Zhang*, Additive manufacturing of a new titanium alloy with tunable microstructure and isotropic properties, Additive Manufacturing 95 (2024) 104546.',
+        images: [
+          {
+            src: 'images/directions/d1-b.jpg',
+            caption: 'Fe-rich Ti alloy by directed energy deposition: segregation-free equiaxed β microstructure with isotropic properties',
+          },
+        ],
         news: [
           { label: 'ShanghaiTech News', url: 'https://www.shanghaitech.edu.cn/2024/1129/c1001a1103931/page.htm' },
         ],
@@ -79,29 +81,31 @@ export const directions: Direction[] = [
     subtitle: 'Materials Design by AM (MDbAM)',
     description:
       'Harnessing the intrinsic physical metallurgy of AM — steep thermal gradients, ultra-fast solidification, and cyclic thermal history — to architect microstructures across length scales: melt-pool-scale heterogeneous structures, cellular dual-phase honeycomb alloys, and grain-boundary-engineered superalloys in which deleterious twin boundaries are eliminated by AM to enhance high-temperature fatigue performance.',
-    images: [
-      {
-        src: 'images/directions/d2-a.jpg',
-        caption: '3D EBSD tomography of melt-pool-scale heterogeneous structures architected by AM',
-      },
-      {
-        src: 'images/directions/d2-b.jpg',
-        caption: 'Material architecting from dual powders: HARD+SOFT domains with gradient interfaces for strength–ductility synergy',
-      },
-      {
-        src: 'images/directions/d2-c.jpg',
-        caption: 'Dual-phase (BCC/FCC) cellular structure with Ni/Cr/Mo elemental partitioning',
-      },
-    ],
     papers: [
       {
         text: 'Y. Xuan, J.Q. Chang, Y. Ou, R. Yang, Z.B. Zhang*, Heterogeneous structure architected by additive manufacturing: facile route towards strong and ductile steel, Materials Research Letters 12(3) (2024) 199-207.',
+        images: [
+          {
+            src: 'images/directions/d2-a.jpg',
+            caption: '3D EBSD tomography of melt-pool-scale heterogeneous structures architected by AM',
+          },
+        ],
         news: [
           { label: 'ShanghaiTech SCA News', url: 'https://mp.weixin.qq.com/s/ngf21uauQ9MdS6rgkBC9UQ' },
         ],
       },
       {
         text: 'Z.B. Zhang*, E. Stavroulakis, D. Stewart, M. Preuss*, Architecting new materials with strength-ductility synergy through interphase engineering, Journal of Materials Science & Technology 240 (2026) 225-232.',
+        images: [
+          {
+            src: 'images/directions/d2-b.jpg',
+            caption: 'Material architecting from dual powders: HARD+SOFT domains with gradient interfaces for strength–ductility synergy',
+          },
+          {
+            src: 'images/directions/d2-c.jpg',
+            caption: 'Dual-phase (BCC/FCC) cellular structure with Ni/Cr/Mo elemental partitioning',
+          },
+        ],
         news: [
           { label: 'ShanghaiTech 2026 “Beautiful Science” Calendar', url: 'https://mp.weixin.qq.com/s/iQ9eLxOEMm1dvYGKwZpt0Q' },
         ],
@@ -114,19 +118,15 @@ export const directions: Direction[] = [
     subtitle: 'Synchrotron + in-situ SEM/TEM + HRDIC',
     description:
       'Multidimensional, multiscale microstructural and mechanical characterization of titanium alloys and Ni-based superalloys under near-service environments, leveraging the Shanghai Synchrotron Radiation Facility and in-situ HRDIC. Current focus: hydrogen-assisted damage of AM titanium alloys and high-temperature fatigue of AM superalloys, guided by a strain-delocalization design philosophy.',
-    images: [
-      {
-        src: 'images/directions/d3-a.jpg',
-        caption: 'Phase boundaries redistribute deformation: from strain localization to strain delocalization in dual-phase Ti alloys',
-      },
-      {
-        src: 'images/directions/d3-b.jpg',
-        caption: 'Twin-boundary-associated strain localization and failure in Ni-based superalloys',
-      },
-    ],
     papers: [
       {
         text: 'Z. Wu, R. Turner, M.J. Qi, L.F.D. Shi, M.S. Wang, F. Wang, Z.H. Gao, Y. Chiu*, Z.B. Zhang*, Effect of phase boundary on the critical resolved shear stress and dislocation behavior of dual-phase titanium alloy, Acta Materialia 275 (2024) 120051.',
+        images: [
+          {
+            src: 'images/directions/d3-a.jpg',
+            caption: 'Phase boundaries redistribute deformation: from strain localization to strain delocalization in dual-phase Ti alloys',
+          },
+        ],
         news: [
           { label: 'ShanghaiTech News', url: 'https://www.shanghaitech.edu.cn/2024/0718/c1001a1099172/page.htm' },
         ],
@@ -136,6 +136,12 @@ export const directions: Direction[] = [
       },
       {
         text: 'Z.B. Zhang*, Z.B. Yang, S. Lu, A. Harte, R. Morana, M. Preuss*, Strain localisation and failure at twin-boundary complexions in nickel-based superalloys, Nature Communications 11 (2020) 5541.',
+        images: [
+          {
+            src: 'images/directions/d3-b.jpg',
+            caption: 'Twin-boundary-associated strain localization and failure in Ni-based superalloys',
+          },
+        ],
         news: [
           { label: 'ShanghaiTech News', url: 'https://www.shanghaitech.edu.cn/2020/1001/c1001a56157/page.htm' },
         ],

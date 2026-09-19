@@ -1,4 +1,4 @@
-import { MapPin } from 'lucide-react'
+import { MapPin, Mail, Phone } from 'lucide-react'
 
 export default function Contact() {
   return (
@@ -36,6 +36,19 @@ export default function Contact() {
                 <br />
                 393 Middle Huaxia Road, Pudong, Shanghai 201210, China
               </span>
+            </p>
+            <p className="mt-3 flex items-center gap-2 text-sm">
+              <Mail className="h-4 w-4 shrink-0 text-cyan-400" />
+              <a
+                href="mailto:zhangzhb1@shanghaitech.edu.cn"
+                className="hover:text-white transition-colors"
+              >
+                zhangzhb1@shanghaitech.edu.cn
+              </a>
+            </p>
+            <p className="mt-3 flex items-center gap-2 text-sm">
+              <Phone className="h-4 w-4 shrink-0 text-cyan-400" />
+              <span>+86-021-20684720</span>
             </p>
           </div>
         </div>
